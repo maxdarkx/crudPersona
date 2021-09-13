@@ -29,15 +29,23 @@ public class ServiciosPersona implements InterfasServiciosPersona{
         return data.save(persona);
     }
 
-    //corregir
+    //Listo
     @Override
     public void borrar(int id) {
-        data.deleteById(id);
+        if(data.findById(id).isPresent())
+            data.deleteById(id);
+
+        else
+            throw new IllegalArgumentException("No existe la persona con el id: "+id);
     }
 
     //corregir
     @Override
     public Persona actualizar(Persona persona) {
-        return null;
+        if(data.findById(persona.getId()).orElse(null) == null)
+        {
+            throw new IllegalArgumentException("No existe la persona con el id pedido");
+        }
+        return data.save(persona);
     }
 }

@@ -30,8 +30,14 @@ public class ControladorPersona {
     }
 
     @DeleteMapping(value = "/borrarPersona/{id}")
-    public void borrarPersona(@PathVariable Integer id)
+    public void borrarPersona(@PathVariable int id)
     {
         servicio.borrar(id);
+    }
+
+    @PutMapping(value = "/actualizarPersona")
+    public void actualizarPersona(@RequestBody Persona persona)
+    {
+        servicio.actualizar(persona);
     }
 }
