@@ -28,4 +28,10 @@ public class ControladorPersona {
     {
         return servicio.guardar(persona);
     }
+
+    @DeleteMapping(value = "/borrarPersona/{id}")
+    public void borrarPersona(@PathVariable Integer id)
+    {
+        servicio.borrar(id);
+    }
 }

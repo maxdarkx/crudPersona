@@ -18,9 +18,9 @@ public class ServiciosPersona implements InterfasServiciosPersona{
         return (List<Persona>)data.findAll();
     }
 
-    //corregir
+    //Listo
     @Override
-    public Persona listarId(Integer id) {
+    public Persona listarId(int id) {
         return data.findById(id).orElse(null);
     }
 
@@ -31,8 +31,8 @@ public class ServiciosPersona implements InterfasServiciosPersona{
 
     //corregir
     @Override
-    public void borrar(Integer id) {
-
+    public void borrar(int id) {
+        data.deleteById(id);
     }
 
     //corregir

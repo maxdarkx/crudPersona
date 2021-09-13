@@ -8,7 +8,7 @@ public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     private String nombre;
     private String edad;
 
@@ -31,10 +31,10 @@ public class Persona {
         this.edad = edad;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 }

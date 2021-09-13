@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface InterfasServiciosPersona {
     List<Persona> listar();
-    Persona listarId(Integer id);
+    Persona listarId(int id);
     Persona guardar(Persona persona);
-    void borrar(Integer id);
+    void borrar(int id);
     Persona actualizar(Persona persona);
 }
