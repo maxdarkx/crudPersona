@@ -18,6 +18,7 @@ public class ServiciosPersona implements InterfasServiciosPersona{
         return (List<Persona>)data.findAll();
     }
 
+    //corregir
     @Override
     public Persona listarId(Integer id) {
         return null;
@@ -28,11 +29,13 @@ public class ServiciosPersona implements InterfasServiciosPersona{
         return data.save(persona);
     }
 
+    //corregir
     @Override
     public void borrar(Integer id) {
 
     }
 
+    //corregir
     @Override
     public Persona actualizar(Persona persona) {
         return null;
