@@ -21,7 +21,7 @@ public class ServiciosPersona implements InterfasServiciosPersona{
     //corregir
     @Override
     public Persona listarId(Integer id) {
-        return null;
+        return data.findById(id).orElse(null);
     }
 
     @Override

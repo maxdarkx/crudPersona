@@ -17,6 +17,12 @@ public class ControladorPersona {
         return servicio.listar();
     }
 
+    @GetMapping(value = "/listarPersona/{id}")
+    public Persona listarPersonaId(@PathVariable Integer id)
+    {
+        return servicio.listarId(id);
+    }
+
     @PostMapping(value = "/guardarPersona")
     public Persona guardarPersona(@RequestBody Persona persona)
     {
